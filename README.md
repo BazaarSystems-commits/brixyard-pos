@@ -1,30 +1,37 @@
 # BrixYard POS – Bricks & Pavers (Tanzania)
 
-Complete frontend for a construction materials POS system focused on bricks, pavers, cement, sand and job work.
+Point-of-sale system for bricks, pavers, cement, sand and construction job work.
 
-## Quick Start (works immediately)
+## Run immediately
 
+1. Download the full package (zip) from the project artifacts / release
+2. Open `index.html` in Chrome, Edge, or Firefox
+
+Or:
 ```bash
-# Open index.html in any browser
-# or
 npx serve .
 ```
 
-## Features
-- Product search bar (name, SKU, category)
-- CSS 3D product viewer modal with rotation
-- Multi-unit inventory (pcs, bags, tonnes)
-- Work Orders with cement:sand ratios + labour
-- Delivery Notes with driver assignment & status workflow
-- TRA-style Tax Invoice
-- Customer statements & aging
-- Stock Transfer between locations
-- Cart → Work Order / Charge (M-Pesa/Cash/Credit) flows
+## What’s fixed (latest)
+
+| Issue | Fix |
+|-------|-----|
+| Icon JSX syntax error (app wouldn’t render) | All multi-path icons wrapped in fragments `<>...</>` |
+| VAT math | `Math.round(subtotal * 0.18)` consistently |
+| Charge did nothing | Validates method, checks stock & credit limit, reduces stock, updates outstanding, creates invoice |
+| Cart qty only ±1 | Typeable quantity input with stock cap |
+| Hardcoded KPIs | Computed from live products/invoices |
+| Work Order costs | Catalog price × qty; VAT correct |
+| Stock transfer | From≠To required; filters by location; updates stock |
+| Create Work Order | Appends to state and navigates |
+| Delivery status labels | Ready for Dispatch / Dispatched / Delivered |
+| Search | Live filter on Sales & Inventory |
+| 3D viewer | CSS perspective + rotate slider |
 
 ## Screens
-Dashboard, Sales (POS), Work Orders, Inventory, Stock Transfer, Customers, Deliveries, Tax Invoice
+Dashboard • Sales (POS) • Work Orders • Inventory • Stock Transfer • Customers • Deliveries • Tax Invoice
 
-## Tech
-Self-contained `index.html` (React + Tailwind CDN) + Vite/TypeScript project structure ready for expansion.
+## GitHub
+https://github.com/BazaarSystems-commits/brixyard-pos
 
-Built for Tanzanian building materials suppliers & contractors.
+The complete interactive `index.html` is in the downloadable zip (55KB+). Upload it over the repo `index.html` via the GitHub web UI if you want the full app in the repo root.
