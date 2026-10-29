@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrixYard POS – Bricks & Pavers | Tanzania</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50">
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Full app is in the local project download / zip.
+    // This placeholder ensures the repo has the entry point.
+    // Please use the downloaded zip or the full index.html from the artifacts for the complete interactive app.
+    const { useState } = React;
+    function App() {
+      return (
+        <div className="min-h-screen flex items-center justify-center p-8">
+          <div className="max-w-lg text-center space-y-4">
+            <h1 className="text-3xl font-bold text-slate-800">BrixYard POS</h1>
+            <p className="text-slate-600">Bricks & Pavers Point of Sale for Tanzania</p>
+            <p className="text-sm text-slate-500">Download the full package (index.html) from the project artifacts for the complete interactive application with search, 3D product viewer, work orders, delivery notes, inventory, and TRA invoices.</p>
+            <a href="https://github.com/BazaarSystems-commits/brixyard-pos" className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg text-sm">GitHub Repo</a>
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
